@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Suwarna Pathmanathan – Rota Jun–Sep 2025</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0d0d14">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Suwarna Rota">
+<link rel="apple-touch-icon" href="icon-192.png">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+  body {
+    background: #0d0d14;
+    color: #e0e0e0;
+    font-family: 'Source Code Pro', monospace;
+    padding: 1.2rem 1rem;
+    min-height: 100vh;
+    font-size: 16px; /* prevent iOS zoom on inputs */
+  }
+
+  /* ── Header ── */
+  .header { border-bottom: 1px solid #2a2a3a; padding-bottom: 1.2rem; margin-bottom: 1.5rem; }
+  .header-sub { font-size: 0.65rem; color: #5a5a7a; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 0.3rem; }
+  .header h1 { font-family: 'Playfair Display', serif; font-size: clamp(1.4rem, 6vw, 2.2rem); font-weight: 700; color: #f0f0ff; margin-bottom: 0.2rem; line-height: 1.2; }
+  .header-dates { font-size: 0.68rem; color: #5a5a7a; margin-bottom: 1rem; }
+
+  /* ── Breakdown cards ── */
+  .breakdown { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 0.6rem; margin-bottom: 1.5rem; }
+  .breakdown-card { display: flex; align-items: center; gap: 0.5rem; background: #1a1a24; border: 1px solid #2a2a3a; border-radius: 10px; padding: 0.6rem 0.8rem; }
+  .breakdown-card .icon { font-size: 1.1rem; flex-shrink: 0; }
+  .breakdown-card .count { font-family: 'Playfair Display', serif; font-size: 1.4rem; line-height: 1; }
+  .breakdown-card .label { font-size: 0.55rem; color: #5a5a7a; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 1px; }
+
+  /* ── Filter buttons ── */
+  .controls { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-bottom: 0.8rem; }
+  .filter-btn {
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 0.7rem;
+    background: #1a1a24;
+    color: #888;
+    transition: all 0.2s;
+    font-family: 'Source Code Pro', monospace;
+    touch-action: manipulation;
+    min-height: 36px; /* easier to tap */
+  }
+  .filter-btn:hover, .filter-btn.active { background: #3a3a6a; color: #c0c0ff; border-color: #5a5aaa; }
+
+  .toggle-btn {
+    cursor: pointer;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 8px 18px;
+    font-size: 0.72rem;
+    background: #1a1a24;
+    color: #888;
+    transition: all 0.2s;
+    font-family: 'Source Code Pro', monospace;
+    margin-bottom: 1.5rem;
+    min-height: 38px;
+    touch-action: manipulation;
+  }
+  .toggle-btn.active { background: #1a2a1a; color: #90d090; border-color: #4a7a4a; }
+
+  /* ── Week blocks ── */
+  .week-block { border-left: 2px solid #2a2a3a; padding-left: 0.9rem; margin-bottom: 1.8rem; }
+  .week-label { font-size: 0.62rem; color: #5a5aaa; text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.6rem; }
+
+  /* ── Shift pills ── */
+  .shift-pill {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.7rem 0.9rem;
+    border-radius: 10px;
+    margin-bottom: 0.4rem;
+    border: 1px solid transparent;
+    transition: transform 0.15s;
+    cursor: default;
+    min-height: 48px; /* touch-friendly */
+  }
+  .shift-pill.is-off { padding: 0.4rem 0.9rem; opacity: 0.4; min-height: 36px; }
+  .shift-pill.is-weekend { opacity: 0.82; }
+
+  .pill-date { font-size: 0.68rem; color: #6a6a8a; min-width: 85px; flex-shrink: 0; }
+  .pill-date.off-date { color: #333; }
+  .pill-icon { font-size: 1rem; flex-shrink: 0; }
+  .pill-icon.off-icon { font-size: 0.75rem; }
+  .pill-shift { font-size: 0.82rem; font-weight: 600; letter-spacing: 0.03em; }
+  .pill-shift.off-shift { font-size: 0.7rem; font-weight: 400; }
+  .pill-time { font-size: 0.62rem; opacity: 0.55; margin-left: 0.2rem; white-space: nowrap; }
+  .pill-wknd { margin-left: auto; font-size: 0.55rem; color: #5a5a7a; flex-shrink: 0; }
+
+  /* ── Summary ── */
+  .summary-section { margin-top: 2.5rem; border-top: 2px solid #2a2a3a; padding-top: 1.5rem; margin-bottom: 1.5rem; }
+  .summary-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: #f0f0ff; margin-bottom: 1rem; }
+
+  /* ── Footer ── */
+  .footer { margin-top: 2rem; border-top: 1px solid #2a2a3a; padding-top: 1rem; font-size: 0.6rem; color: #3a3a5a; text-align: center; letter-spacing: 0.08em; }
+
+  /* ── Tablet / desktop tweaks ── */
+  @media (min-width: 600px) {
+    body { padding: 2rem 1.5rem; }
+    .breakdown { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+    .pill-date { min-width: 100px; }
+    .shift-pill { padding: 0.6rem 1rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-sub">NICU Tier 1 · SHO Rota · Slot 11</div>
+  <h1>Suwarna Pathmanathan</h1>
+  <div class="header-dates">1 Jun → 6 Sep 2025 &nbsp;·&nbsp; Weeks 14–27</div>
+</div>
+
+<div class="controls" id="filters"></div>
+<div class="controls" id="monthFilters"></div>
+<div><button class="toggle-btn" id="toggleOff" onclick="toggleOff()">Hide off days</button></div>
+
+<div id="rota"></div>
+
+<div class="summary-section">
+  <div class="summary-title">Shift Summary</div>
+  <div class="breakdown" id="breakdown"></div>
+</div>
+
+<div class="footer">NICU TIER 1 SHO ROTA · SLOT 11 · SUWARNA PATHMANATHAN</div>
+
+<script>
+const shifts = [
+  // Week 14
+  { date: "Mon 01 Jun", week: 14, shift: "Wards" },
+  { date: "Tue 02 Jun", week: 14, shift: "Wards" },
+  { date: "Wed 03 Jun", week: 14, shift: "Wards" },
+  { date: "Thu 04 Jun", week: 14, shift: "Wards" },
+  { date: "Fri 05 Jun", week: 14, shift: "Wards" },
+  { date: "Sat 06 Jun", week: 14, shift: "Wards" },
+  { date: "Sun 07 Jun", week: 14, shift: "Wards" },
+  // Week 15
+  { date: "Mon 08 Jun", week: 15, shift: "Off" },
+  { date: "Tue 09 Jun", week: 15, shift: "Off" },
+  { date: "Wed 10 Jun", week: 15, shift: "NICU 2 LD" },
+  { date: "Thu 11 Jun", week: 15, shift: "NICU 2 LD" },
+  { date: "Fri 12 Jun", week: 15, shift: "NICU 2 LD" },
+  { date: "Sat 13 Jun", week: 15, shift: "Off" },
+  { date: "Sun 14 Jun", week: 15, shift: "Off" },
+  // Week 16
+  { date: "Mon 15 Jun", week: 16, shift: "Short Day" },
+  { date: "Tue 16 Jun", week: 16, shift: "Short Day" },
+  { date: "Wed 17 Jun", week: 16, shift: "NICU 1 LD" },
+  { date: "Thu 18 Jun", week: 16, shift: "SPA" },
+  { date: "Fri 19 Jun", week: 16, shift: "Wards" },
+  { date: "Sat 20 Jun", week: 16, shift: "Off" },
+  { date: "Sun 21 Jun", week: 16, shift: "Off" },
+  // Week 17
+  { date: "Mon 22 Jun", week: 17, shift: "Off" },
+  { date: "Tue 23 Jun", week: 17, shift: "Off" },
+  { date: "Wed 24 Jun", week: 17, shift: "Short Day" },
+  { date: "Thu 25 Jun", week: 17, shift: "Short Day" },
+  { date: "Fri 26 Jun", week: 17, shift: "Short Day" },
+  { date: "Sat 27 Jun", week: 17, shift: "Night 1" },
+  { date: "Sun 28 Jun", week: 17, shift: "Night 1" },
+  // Week 18
+  { date: "Mon 29 Jun", week: 18, shift: "Night 1" },
+  { date: "Tue 30 Jun", week: 18, shift: "Off" },
+  { date: "Wed 01 Jul", week: 18, shift: "Off" },
+  { date: "Thu 02 Jul", week: 18, shift: "Off" },
+  { date: "Fri 03 Jul", week: 18, shift: "Clinic" },
+  { date: "Sat 04 Jul", week: 18, shift: "Off" },
+  { date: "Sun 05 Jul", week: 18, shift: "Off" },
+  // Week 19
+  { date: "Mon 06 Jul", week: 19, shift: "SPA" },
+  { date: "Tue 07 Jul", week: 19, shift: "SCBU" },
+  { date: "Wed 08 Jul", week: 19, shift: "SCBU" },
+  { date: "Thu 09 Jul", week: 19, shift: "Short Day" },
+  { date: "Fri 10 Jul", week: 19, shift: "Short Day" },
+  { date: "Sat 11 Jul", week: 19, shift: "Off" },
+  { date: "Sun 12 Jul", week: 19, shift: "Off" },
+  // Week 20
+  { date: "Mon 13 Jul", week: 20, shift: "NICU 2 LD" },
+  { date: "Tue 14 Jul", week: 20, shift: "NICU 2 LD" },
+  { date: "Wed 15 Jul", week: 20, shift: "Off" },
+  { date: "Thu 16 Jul", week: 20, shift: "Off" },
+  { date: "Fri 17 Jul", week: 20, shift: "Night 2" },
+  { date: "Sat 18 Jul", week: 20, shift: "Night 2" },
+  { date: "Sun 19 Jul", week: 20, shift: "Night 2" },
+  // Week 21
+  { date: "Mon 20 Jul", week: 21, shift: "Off" },
+  { date: "Tue 21 Jul", week: 21, shift: "Off" },
+  { date: "Wed 22 Jul", week: 21, shift: "Clinic" },
+  { date: "Thu 23 Jul", week: 21, shift: "NICU 1 LD" },
+  { date: "Fri 24 Jul", week: 21, shift: "NICU 1 LD" },
+  { date: "Sat 25 Jul", week: 21, shift: "Off" },
+  { date: "Sun 26 Jul", week: 21, shift: "Off" },
+  // Week 22
+  { date: "Mon 27 Jul", week: 22, shift: "Short Day" },
+  { date: "Tue 28 Jul", week: 22, shift: "SPA" },
+  { date: "Wed 29 Jul", week: 22, shift: "Short Day" },
+  { date: "Thu 30 Jul", week: 22, shift: "Short Day" },
+  { date: "Fri 31 Jul", week: 22, shift: "Night 2" },
+  { date: "Sat 01 Aug", week: 22, shift: "Off" },
+  { date: "Sun 02 Aug", week: 22, shift: "Off" },
+  // Week 23
+  { date: "Mon 03 Aug", week: 23, shift: "Off" },
+  { date: "Tue 04 Aug", week: 23, shift: "Off" },
+  { date: "Wed 05 Aug", week: 23, shift: "Off" },
+  { date: "Thu 06 Aug", week: 23, shift: "Off" },
+  { date: "Fri 07 Aug", week: 23, shift: "Short Day" },
+  { date: "Sat 08 Aug", week: 23, shift: "NICU 2 LD" },
+  { date: "Sun 09 Aug", week: 23, shift: "NICU 2 LD" },
+  // Week 24
+  { date: "Mon 10 Aug", week: 24, shift: "Short Day" },
+  { date: "Tue 11 Aug", week: 24, shift: "Short Day" },
+  { date: "Wed 12 Aug", week: 24, shift: "Off" },
+  { date: "Thu 13 Aug", week: 24, shift: "SCBU" },
+  { date: "Fri 14 Aug", week: 24, shift: "SCBU" },
+  { date: "Sat 15 Aug", week: 24, shift: "Off" },
+  { date: "Sun 16 Aug", week: 24, shift: "Off" },
+  // Week 25
+  { date: "Mon 17 Aug", week: 25, shift: "Night 2" },
+  { date: "Tue 18 Aug", week: 25, shift: "Night 2" },
+  { date: "Wed 19 Aug", week: 25, shift: "Night 2" },
+  { date: "Thu 20 Aug", week: 25, shift: "Night 2" },
+  { date: "Fri 21 Aug", week: 25, shift: "Off" },
+  { date: "Sat 22 Aug", week: 25, shift: "Off" },
+  { date: "Sun 23 Aug", week: 25, shift: "Off" },
+  // Week 26
+  { date: "Mon 24 Aug", week: 26, shift: "SCBU" },
+  { date: "Tue 25 Aug", week: 26, shift: "Short Day" },
+  { date: "Wed 26 Aug", week: 26, shift: "Wards" },
+  { date: "Thu 27 Aug", week: 26, shift: "Short Day" },
+  { date: "Fri 28 Aug", week: 26, shift: "SPA" },
+  { date: "Sat 29 Aug", week: 26, shift: "Off" },
+  { date: "Sun 30 Aug", week: 26, shift: "Off" },
+  // Week 27
+  { date: "Mon 31 Aug", week: 27, shift: "NICU 1 LD" },
+  { date: "Tue 01 Sep", week: 27, shift: "NICU 1 LD" },
+  { date: "Wed 02 Sep", week: 27, shift: "NICU 1 LD" },
+  { date: "Thu 03 Sep", week: 27, shift: "Off" },
+  { date: "Fri 04 Sep", week: 27, shift: "Off" },
+  { date: "Sat 05 Sep", week: 27, shift: "NICU 1 LD" },
+  { date: "Sun 06 Sep", week: 27, shift: "NICU 1 LD" },
+];
+
+const meta = {
+  "Night 1":   { bg: "#1e3a5f", text: "#7eb8f7", icon: "🌙", time: { normal: "20:00–09:00", frisat: "20:00–08:30" } },
+  "Night 2":   { bg: "#2d1b4e", text: "#c4a4ff", icon: "🌑", time: { normal: "20:00–09:00", frisat: "20:00–08:30" } },
+  "NICU 1 LD": { bg: "#0f3d2e", text: "#4ecca3", icon: "🏥", time: "08:00–21:00" },
+  "NICU 2 LD": { bg: "#1a3a2a", text: "#72e0b0", icon: "🏥", time: "08:00–21:00" },
+  "SCBU":      { bg: "#3a2a0f", text: "#f0c060", icon: "👶", time: "08:00–17:00" },
+  "Wards":     { bg: "#2a2a3a", text: "#a0a8d0", icon: "🛏",  time: "08:00–17:00" },
+  "Short Day": { bg: "#1a2a1a", text: "#90d090", icon: "☀️", time: "08:00–17:00" },
+  "Clinic":    { bg: "#3a1a2a", text: "#e890b0", icon: "🩺", time: "08:30–17:30" },
+  "SPA":       { bg: "#2a1a1a", text: "#e0a080", icon: "📋", time: "08:00–17:00" },
+  "Off":       { bg: "#161616", text: "#3a3a3a", icon: "💤", time: null },
+};
+
+function getMeta(shift) {
+  for (const key of Object.keys(meta)) {
+    if (shift.startsWith(key)) return { key, ...meta[key] };
+  }
+  return { bg: "#161616", text: "#3a3a3a", icon: "💤", time: null };
+}
+
+function getTime(shift, date) {
+  const m = getMeta(shift);
+  if (!m.time) return null;
+  if (typeof m.time === "object") {
+    return (date.startsWith("Fri") || date.startsWith("Sat")) ? m.time.frisat : m.time.normal;
+  }
+  return m.time;
+}
+
+// Breakdown
+const breakdownDefs = [
+  { label: "Wards",     col: "#a0a8d0", icon: "🛏"  },
+  { label: "Short Day", col: "#90d090", icon: "☀️"  },
+  { label: "NICU 1 LD", col: "#4ecca3", icon: "🏥"  },
+  { label: "NICU 2 LD", col: "#72e0b0", icon: "🏥"  },
+  { label: "Night 1",   col: "#7eb8f7", icon: "🌙"  },
+  { label: "Night 2",   col: "#c4a4ff", icon: "🌑"  },
+  { label: "SCBU",      col: "#f0c060", icon: "👶"  },
+  { label: "SPA",       col: "#e0a080", icon: "📋"  },
+  { label: "Clinic",    col: "#e890b0", icon: "🩺"  },
+  { label: "Off",       col: "#555",    icon: "💤"  },
+];
+
+const bdEl = document.getElementById("breakdown");
+breakdownDefs.forEach(b => {
+  const count = shifts.filter(s => s.shift === b.label).length;
+  if (!count) return;
+  bdEl.innerHTML += `
+    <div class="breakdown-card">
+      <span class="icon">${b.icon}</span>
+      <div>
+        <div class="count" style="color:${b.col}">${count}</div>
+        <div class="label">${b.label}</div>
+      </div>
+    </div>`;
+});
+
+// Filter buttons
+let activeFilter = "All";
+let activeMonth = "All";
+let hideOffDays = false;
+const filterTypes = ["All", "Night 1", "Night 2", "NICU 1 LD", "NICU 2 LD", "SCBU", "Wards", "Short Day", "Clinic", "SPA", "Off"];
+const filtersEl = document.getElementById("filters");
+filterTypes.forEach(t => {
+  const m = getMeta(t);
+  const btn = document.createElement("button");
+  btn.className = "filter-btn" + (t === "All" ? " active" : "");
+  btn.textContent = (t !== "All" ? m.icon + " " : "") + t;
+  btn.onclick = () => {
+    activeFilter = t;
+    document.querySelectorAll("#filters .filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    render();
+  };
+  filtersEl.appendChild(btn);
+});
+
+const months = ["All", "Jun", "Jul", "Aug", "Sep"];
+const monthIcons = { "Jun": "🌿", "Jul": "☀️", "Aug": "🌻", "Sep": "🍂" };
+const monthFiltersEl = document.getElementById("monthFilters");
+months.forEach(m => {
+  const btn = document.createElement("button");
+  btn.className = "filter-btn month-btn" + (m === "All" ? " active" : "");
+  btn.style.borderRadius = "8px";
+  btn.textContent = (m !== "All" ? monthIcons[m] + " " : "📅 ") + m;
+  btn.onclick = () => {
+    activeMonth = m;
+    document.querySelectorAll(".month-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    render();
+  };
+  monthFiltersEl.appendChild(btn);
+});
+
+function toggleOff() {
+  hideOffDays = !hideOffDays;
+  const btn = document.getElementById("toggleOff");
+  btn.classList.toggle("active", hideOffDays);
+  btn.textContent = hideOffDays ? "✓ Off days hidden" : "Hide off days";
+  render();
+}
+
+function render() {
+  const weeks = [...new Set(shifts.map(s => s.week))];
+  const rotaEl = document.getElementById("rota");
+  rotaEl.innerHTML = "";
+
+  weeks.forEach(w => {
+    const wShifts = shifts
+      .filter(s => s.week === w)
+      .filter(s => activeFilter === "All" || s.shift.startsWith(activeFilter))
+      .filter(s => activeMonth === "All" || s.date.includes(activeMonth))
+      .filter(s => !hideOffDays || s.shift !== "Off");
+
+    if (!wShifts.length) return;
+
+    const block = document.createElement("div");
+    block.className = "week-block";
+    block.innerHTML = `<div class="week-label">Week ${w}</div>`;
+
+    wShifts.forEach(s => {
+      const m = getMeta(s.shift);
+      const isOff = s.shift === "Off";
+      const isWeekend = s.date.startsWith("Sat") || s.date.startsWith("Sun");
+      const time = getTime(s.shift, s.date);
+
+      const pill = document.createElement("div");
+      pill.className = "shift-pill" + (isOff ? " is-off" : "") + (isWeekend && !isOff ? " is-weekend" : "");
+      pill.style.background = m.bg;
+      pill.style.borderColor = isOff ? "#252525" : m.text + "22";
+
+      pill.innerHTML = `
+        <span class="pill-date ${isOff ? 'off-date' : ''}">${s.date}</span>
+        <span class="pill-icon ${isOff ? 'off-icon' : ''}">${m.icon}</span>
+        <span class="pill-shift ${isOff ? 'off-shift' : ''}" style="color:${m.text}">${s.shift}</span>
+        ${time ? `<span class="pill-time" style="color:${m.text}">${time}</span>` : ""}
+        ${isWeekend && !isOff ? `<span class="pill-wknd">WKND</span>` : ""}
+      `;
+      block.appendChild(pill);
+    });
+
+    rotaEl.appendChild(block);
+  });
+}
+
+render();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('sw.js');
+}
+</script>
+</body>
+</html>
