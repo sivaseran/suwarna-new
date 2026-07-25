@@ -1,0 +1,312 @@
+date,weekday,shift,category,time
+2026-05-01,Friday,AL 1,Annual Leave,
+2026-05-02,Saturday,Off,Off,
+2026-05-03,Sunday,Off,Off,
+2026-05-04,Monday,Night 2,Night,20:00–09:00
+2026-05-05,Tuesday,Night 2,Night,20:00–09:00
+2026-05-06,Wednesday,Night 2,Night,20:00–09:00
+2026-05-07,Thursday,Night 2,Night,20:00–09:00
+2026-05-08,Friday,Off,Off,
+2026-05-09,Saturday,Off,Off,
+2026-05-10,Sunday,Off,Off,
+2026-05-11,Monday,SCBU,Day Shift,08:00–17:00
+2026-05-12,Tuesday,Wards,Day Shift,08:00–17:00
+2026-05-13,Wednesday,Wards,Day Shift,08:00–17:00
+2026-05-14,Thursday,Off,Off,
+2026-05-15,Friday,SPA,Day Shift,08:00–17:00
+2026-05-16,Saturday,Off,Off,
+2026-05-17,Sunday,Off,Off,
+2026-05-18,Monday,Off,Off,
+2026-05-19,Tuesday,PSL,Professional/Study Leave,
+2026-05-20,Wednesday,PSL,Professional/Study Leave,
+2026-05-21,Thursday,Off,Off,
+2026-05-22,Friday,Off,Off,
+2026-05-23,Saturday,NICU 1 LD,Long Day,08:00–21:00
+2026-05-24,Sunday,NICU 1 LD,Long Day,08:00–21:00
+2026-05-25,Monday,Off,Off,
+2026-05-26,Tuesday,Night 1,Night,20:00–09:00
+2026-05-27,Wednesday,Night 1,Night,20:00–09:00
+2026-05-28,Thursday,Sick leave - Night 1,Sick Leave,
+2026-05-29,Friday,Off,Off,
+2026-05-30,Saturday,Off,Off,
+2026-05-31,Sunday,Off,Off,
+2026-06-01,Monday,Sick Leave - wards,Sick Leave,
+2026-06-02,Tuesday,Wards,Day Shift,08:00–17:00
+2026-06-03,Wednesday,Wards,Day Shift,08:00–17:00
+2026-06-04,Thursday,Wards,Day Shift,08:00–17:00
+2026-06-05,Friday,Wards,Day Shift,08:00–17:00
+2026-06-06,Saturday,Wards,Day Shift,08:00–17:00
+2026-06-07,Sunday,Wards,Day Shift,08:00–17:00
+2026-06-08,Monday,Off,Off,
+2026-06-09,Tuesday,Off,Off,
+2026-06-10,Wednesday,NICU 2 LD,Long Day,08:00–21:00
+2026-06-11,Thursday,NICU 2 LD,Long Day,08:00–21:00
+2026-06-12,Friday,NICU 2 LD,Long Day,08:00–21:00
+2026-06-13,Saturday,Off,Off,
+2026-06-14,Sunday,Off,Off,
+2026-06-15,Monday,Short Day,Day Shift,08:00–17:00
+2026-06-16,Tuesday,Short Day,Day Shift,08:00–17:00
+2026-06-17,Wednesday,SPA,Day Shift,08:00–17:00
+2026-06-18,Thursday,NICU 1 LD,Long Day,08:00–21:00
+2026-06-19,Friday,Wards,Day Shift,08:00–17:00
+2026-06-20,Saturday,Off,Off,
+2026-06-21,Sunday,Off,Off,
+2026-06-22,Monday,Off,Off,
+2026-06-23,Tuesday,Off,Off,
+2026-06-24,Wednesday,SL,Study Leave,
+2026-06-25,Thursday,Short Day,Day Shift,08:00–17:00
+2026-06-26,Friday,SL,Study Leave,
+2026-06-27,Saturday,Night 1,Night,20:00–08:30
+2026-06-28,Sunday,Night 1,Night,20:00–09:00
+2026-06-29,Monday,Night 1,Night,20:00–09:00
+2026-06-30,Tuesday,Off,Off,
+2026-07-01,Wednesday,Off,Off,
+2026-07-02,Thursday,Off,Off,
+2026-07-03,Friday,Clinic,Clinic,08:30–17:30
+2026-07-04,Saturday,Off,Off,
+2026-07-05,Sunday,Off,Off,
+2026-07-06,Monday,Night 2,Night,20:00–09:00
+2026-07-07,Tuesday,Off,Off,
+2026-07-08,Wednesday,Off,Off,
+2026-07-09,Thursday,AL 2,Annual Leave,
+2026-07-10,Friday,SPA,Day Shift,08:00–17:00
+2026-07-11,Saturday,Off,Off,
+2026-07-12,Sunday,Off,Off,
+2026-07-13,Monday,NICU 2 LD,Long Day,08:00–21:00
+2026-07-14,Tuesday,NICU 2 LD,Long Day,08:00–21:00
+2026-07-15,Wednesday,Off,Off,
+2026-07-16,Thursday,Off,Off,
+2026-07-17,Friday,Night 2,Night,20:00–08:30
+2026-07-18,Saturday,Night 2,Night,20:00–08:30
+2026-07-19,Sunday,Night 2,Night,20:00–09:00
+2026-07-20,Monday,Off,Off,
+2026-07-21,Tuesday,Off,Off,
+2026-07-22,Wednesday,Clinic,Clinic,08:30–17:30
+2026-07-23,Thursday,NICU 1 LD,Long Day,08:00–21:00
+2026-07-24,Friday,NICU 1 LD,Long Day,08:00–21:00
+2026-07-25,Saturday,Off,Off,
+2026-07-26,Sunday,NICU 2 LD -,Long Day,08:00–21:00
+2026-07-27,Monday,NICU 2 LD,Long Day,08:00–21:00
+2026-07-28,Tuesday,SL,Study Leave,
+2026-07-29,Wednesday,SPA,Day Shift,08:00–17:00
+2026-07-30,Thursday,AL 3,Annual Leave,
+2026-07-31,Friday,Off,Off,
+2026-08-01,Saturday,Off,Off,
+2026-08-02,Sunday,Off,Off,
+2026-08-03,Monday,Off,Off,
+2026-08-04,Tuesday,Off,Off,
+2026-08-05,Wednesday,Off,Off,
+2026-08-06,Thursday,Off,Off,
+2026-08-07,Friday,Short Day,Day Shift,08:00–17:00
+2026-08-08,Saturday,NICU 2 LD,Long Day,08:00–21:00
+2026-08-09,Sunday,NICU 2 LD,Long Day,08:00–21:00
+2026-08-10,Monday,Short Day,Day Shift,08:00–17:00
+2026-08-11,Tuesday,AL 4,Annual Leave,
+2026-08-12,Wednesday,Off,Off,
+2026-08-13,Thursday,AL 5,Annual Leave,
+2026-08-14,Friday,SCBU,Day Shift,08:00–17:00
+2026-08-15,Saturday,Off,Off,
+2026-08-16,Sunday,Off,Off,
+2026-08-17,Monday,Night 2,Night,20:00–09:00
+2026-08-18,Tuesday,Night 2,Night,20:00–09:00
+2026-08-19,Wednesday,Night 2,Night,20:00–09:00
+2026-08-20,Thursday,Night 2,Night,20:00–09:00
+2026-08-21,Friday,Off,Off,
+2026-08-22,Saturday,Off,Off,
+2026-08-23,Sunday,Off,Off,
+2026-08-24,Monday,SCBU,Day Shift,08:00–17:00
+2026-08-25,Tuesday,AL 6,Annual Leave,
+2026-08-26,Wednesday,Wards,Day Shift,08:00–17:00
+2026-08-27,Thursday,AL 7,Annual Leave,
+2026-08-28,Friday,SPA,Day Shift,08:00–17:00
+2026-08-29,Saturday,NICU 2 LD,Long Day,08:00–21:00
+2026-08-30,Sunday,Off,Off,
+2026-08-31,Monday,NICU 1 LD,Long Day,08:00–21:00
+2026-09-01,Tuesday,NICU 1 LD,Long Day,08:00–21:00
+2026-09-02,Wednesday,NICU 1 LD,Long Day,08:00–21:00
+2026-09-03,Thursday,Off,Off,
+2026-09-04,Friday,Off,Off,
+2026-09-05,Saturday,NICU 1 LD,Long Day,08:00–21:00
+2026-09-06,Sunday,NICU 1 LD,Long Day,08:00–21:00
+2026-09-07,Monday,Wards,Day Shift,08:00–17:00
+2026-09-08,Tuesday,Wards,Day Shift,08:00–17:00
+2026-09-09,Wednesday,Wards,Day Shift,08:00–17:00
+2026-09-10,Thursday,Wards,Day Shift,08:00–17:00
+2026-09-11,Friday,Wards,Day Shift,08:00–17:00
+2026-09-12,Saturday,Off,Off,
+2026-09-13,Sunday,Off,Off,
+2026-09-14,Monday,NICU 2 LD,Long Day,08:00–21:00
+2026-09-15,Tuesday,NICU 2 LD,Long Day,08:00–21:00
+2026-09-16,Wednesday,Off,Off,
+2026-09-17,Thursday,Off,Off,
+2026-09-18,Friday,Night 2,Night,20:00–08:30
+2026-09-19,Saturday,Night 2,Night,20:00–08:30
+2026-09-20,Sunday,Night 2,Night,20:00–09:00
+2026-09-21,Monday,Off,Off,
+2026-09-22,Tuesday,Off,Off,
+2026-09-23,Wednesday,Clinic,Clinic,08:30–17:30
+2026-09-24,Thursday,NICU 1 LD,Long Day,08:00–21:00
+2026-09-25,Friday,NICU 1 LD,Long Day,08:00–21:00
+2026-09-26,Saturday,Off,Off,
+2026-09-27,Sunday,Off,Off,
+2026-09-28,Monday,SPA,Day Shift,08:00–17:00
+2026-09-29,Tuesday,Short Day,Day Shift,08:00–17:00
+2026-09-30,Wednesday,Short Day,Day Shift,08:00–17:00
+2026-10-01,Thursday,Short Day,Day Shift,08:00–17:00
+2026-10-02,Friday,Clinic,Clinic,08:30–17:30
+2026-10-03,Saturday,Off,Off,
+2026-10-04,Sunday,Off,Off,
+2026-10-05,Monday,Off,Off,
+2026-10-06,Tuesday,Off,Off,
+2026-10-07,Wednesday,Off,Off,
+2026-10-08,Thursday,Off,Off,
+2026-10-09,Friday,SPA,Day Shift,08:00–17:00
+2026-10-10,Saturday,NICU 2 LD,Long Day,08:00–21:00
+2026-10-11,Sunday,NICU 2 LD,Long Day,08:00–21:00
+2026-10-12,Monday,Short Day,Day Shift,08:00–17:00
+2026-10-13,Tuesday,Short Day,Day Shift,08:00–17:00
+2026-10-14,Wednesday,Off,Off,
+2026-10-15,Thursday,Short Day,Day Shift,08:00–17:00
+2026-10-16,Friday,Short Day,Day Shift,08:00–17:00
+2026-10-17,Saturday,Off,Off,
+2026-10-18,Sunday,Off,Off,
+2026-10-19,Monday,Night 2,Night,20:00–09:00
+2026-10-20,Tuesday,Night 2,Night,20:00–09:00
+2026-10-21,Wednesday,Night 2,Night,20:00–09:00
+2026-10-22,Thursday,Night 2,Night,20:00–09:00
+2026-10-23,Friday,Off,Off,
+2026-10-24,Saturday,Off,Off,
+2026-10-25,Sunday,Off,Off,
+2026-10-26,Monday,Short Day,Day Shift,08:00–17:00
+2026-10-27,Tuesday,Short Day,Day Shift,08:00–17:00
+2026-10-28,Wednesday,Short Day,Day Shift,08:00–17:00
+2026-10-29,Thursday,SPA,Day Shift,08:00–17:00
+2026-10-30,Friday,Short Day,Day Shift,08:00–17:00
+2026-10-31,Saturday,Off,Off,
+2026-11-01,Sunday,Off,Off,
+2026-11-02,Monday,NICU 1 LD,Long Day,08:00–21:00
+2026-11-03,Tuesday,NICU 1 LD,Long Day,08:00–21:00
+2026-11-04,Wednesday,NICU 1 LD,Long Day,08:00–21:00
+2026-11-05,Thursday,Off,Off,
+2026-11-06,Friday,Off,Off,
+2026-11-07,Saturday,NICU 1 LD,Long Day,08:00–21:00
+2026-11-08,Sunday,NICU 1 LD,Long Day,08:00–21:00
+2026-11-09,Monday,Off,Off,
+2026-11-10,Tuesday,Night 1,Night,20:00–09:00
+2026-11-11,Wednesday,Night 1,Night,20:00–09:00
+2026-11-12,Thursday,Night 1,Night,20:00–09:00
+2026-11-13,Friday,Off,Off,
+2026-11-14,Saturday,Off,Off,
+2026-11-15,Sunday,Off,Off,
+2026-11-16,Monday,Wards,Day Shift,08:00–17:00
+2026-11-17,Tuesday,Wards,Day Shift,08:00–17:00
+2026-11-18,Wednesday,Wards,Day Shift,08:00–17:00
+2026-11-19,Thursday,Wards,Day Shift,08:00–17:00
+2026-11-20,Friday,Wards,Day Shift,08:00–17:00
+2026-11-21,Saturday,Wards,Day Shift,08:00–17:00
+2026-11-22,Sunday,Wards,Day Shift,08:00–17:00
+2026-11-23,Monday,Off,Off,
+2026-11-24,Tuesday,Off,Off,
+2026-11-25,Wednesday,NICU 2 LD,Long Day,08:00–21:00
+2026-11-26,Thursday,NICU 2 LD,Long Day,08:00–21:00
+2026-11-27,Friday,NICU 2 LD,Long Day,08:00–21:00
+2026-11-28,Saturday,Off,Off,
+2026-11-29,Sunday,Off,Off,
+2026-11-30,Monday,Short Day,Day Shift,08:00–17:00
+2026-12-01,Tuesday,Short Day,Day Shift,08:00–17:00
+2026-12-02,Wednesday,Short Day,Day Shift,08:00–17:00
+2026-12-03,Thursday,SPA,Day Shift,08:00–17:00
+2026-12-04,Friday,Short Day,Day Shift,08:00–17:00
+2026-12-05,Saturday,Off,Off,
+2026-12-06,Sunday,Off,Off,
+2026-12-07,Monday,Off,Off,
+2026-12-08,Tuesday,Off,Off,
+2026-12-09,Wednesday,Short Day,Day Shift,08:00–17:00
+2026-12-10,Thursday,Short Day,Day Shift,08:00–17:00
+2026-12-11,Friday,Night 1,Night,20:00–08:30
+2026-12-12,Saturday,Night 1,Night,20:00–08:30
+2026-12-13,Sunday,Night 1,Night,20:00–09:00
+2026-12-14,Monday,Night 1,Night,20:00–09:00
+2026-12-15,Tuesday,Off,Off,
+2026-12-16,Wednesday,Off,Off,
+2026-12-17,Thursday,Off,Off,
+2026-12-18,Friday,Clinic,Clinic,08:30–17:30
+2026-12-19,Saturday,Off,Off,
+2026-12-20,Sunday,Off,Off,
+2026-12-21,Monday,Short Day,Day Shift,08:00–17:00
+2026-12-22,Tuesday,SPA,Day Shift,08:00–17:00
+2026-12-23,Wednesday,Short Day,Day Shift,08:00–17:00
+2026-12-24,Thursday,Short Day,Day Shift,08:00–17:00
+2026-12-25,Friday,Short Day,Day Shift,08:00–17:00
+2026-12-26,Saturday,Off,Off,
+2026-12-27,Sunday,Off,Off,
+2026-12-28,Monday,NICU 2 LD,Long Day,08:00–21:00
+2026-12-29,Tuesday,NICU 2 LD,Long Day,08:00–21:00
+2026-12-30,Wednesday,Off,Off,
+2026-12-31,Thursday,Off,Off,
+2027-01-01,Friday,Night 2,Night,20:00–08:30
+2027-01-02,Saturday,Night 2,Night,20:00–08:30
+2027-01-03,Sunday,Night 2,Night,20:00–09:00
+2027-01-04,Monday,Off,Off,
+2027-01-05,Tuesday,Off,Off,
+2027-01-06,Wednesday,Clinic,Clinic,08:30–17:30
+2027-01-07,Thursday,NICU 1 LD,Long Day,08:00–21:00
+2027-01-08,Friday,NICU 1 LD,Long Day,08:00–21:00
+2027-01-09,Saturday,Off,Off,
+2027-01-10,Sunday,Off,Off,
+2027-01-11,Monday,SPA,Day Shift,08:00–17:00
+2027-01-12,Tuesday,Short Day,Day Shift,08:00–17:00
+2027-01-13,Wednesday,Short Day,Day Shift,08:00–17:00
+2027-01-14,Thursday,Short Day,Day Shift,08:00–17:00
+2027-01-15,Friday,Short Day,Day Shift,08:00–17:00
+2027-01-16,Saturday,Off,Off,
+2027-01-17,Sunday,Off,Off,
+2027-01-18,Monday,Off,Off,
+2027-01-19,Tuesday,Off,Off,
+2027-01-20,Wednesday,Off,Off,
+2027-01-21,Thursday,Off,Off,
+2027-01-22,Friday,Clinic,Clinic,08:30–17:30
+2027-01-23,Saturday,NICU 2 LD,Long Day,08:00–21:00
+2027-01-24,Sunday,NICU 2 LD,Long Day,08:00–21:00
+2027-01-25,Monday,Short Day,Day Shift,08:00–17:00
+2027-01-26,Tuesday,Short Day,Day Shift,08:00–17:00
+2027-01-27,Wednesday,Off,Off,
+2027-01-28,Thursday,Short Day,Day Shift,08:00–17:00
+2027-01-29,Friday,Short Day,Day Shift,08:00–17:00
+2027-01-30,Saturday,Off,Off,
+2027-01-31,Sunday,Off,Off,
+2027-02-01,Monday,Night 2,Night,20:00–09:00
+2027-02-02,Tuesday,Night 2,Night,20:00–09:00
+2027-02-03,Wednesday,Night 2,Night,20:00–09:00
+2027-02-04,Thursday,Night 2,Night,20:00–09:00
+2027-02-05,Friday,Off,Off,
+2027-02-06,Saturday,Off,Off,
+2027-02-07,Sunday,Off,Off,
+2027-02-08,Monday,Short Day,Day Shift,08:00–17:00
+2027-02-09,Tuesday,Short Day,Day Shift,08:00–17:00
+2027-02-10,Wednesday,Short Day,Day Shift,08:00–17:00
+2027-02-11,Thursday,SPA,Day Shift,08:00–17:00
+2027-02-12,Friday,Short Day,Day Shift,08:00–17:00
+2027-02-13,Saturday,Off,Off,
+2027-02-14,Sunday,Off,Off,
+2027-02-15,Monday,NICU 1 LD,Long Day,08:00–21:00
+2027-02-16,Tuesday,NICU 1 LD,Long Day,08:00–21:00
+2027-02-17,Wednesday,NICU 1 LD,Long Day,08:00–21:00
+2027-02-18,Thursday,Off,Off,
+2027-02-19,Friday,Off,Off,
+2027-02-20,Saturday,NICU 1 LD,Long Day,08:00–21:00
+2027-02-21,Sunday,NICU 1 LD,Long Day,08:00–21:00
+2027-02-22,Monday,Off,Off,
+2027-02-23,Tuesday,Night 1,Night,20:00–09:00
+2027-02-24,Wednesday,Night 1,Night,20:00–09:00
+2027-02-25,Thursday,Night 1,Night,20:00–09:00
+2027-02-26,Friday,Off,Off,
+2027-02-27,Saturday,Off,Off,
+2027-02-28,Sunday,Off,Off,
+2027-03-01,Monday,Wards,Day Shift,08:00–17:00
+2027-03-02,Tuesday,Wards,Day Shift,08:00–17:00
+2027-03-03,Wednesday,Wards,Day Shift,08:00–17:00
+2027-03-04,Thursday,Wards,Day Shift,08:00–17:00
+2027-03-05,Friday,Wards,Day Shift,08:00–17:00
+2027-03-06,Saturday,Wards,Day Shift,08:00–17:00
+2027-03-07,Sunday,Wards,Day Shift,08:00–17:00
