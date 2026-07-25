@@ -1,12 +1,12 @@
 {
-  "name": "Suwarna Pathmanathan Rota",
+  "name": "Suwarna Rota v4 Professional",
   "short_name": "Suwarna Rota",
-  "description": "Mobile NICU rota from May 2026 to March 2027",
+  "description": "Professional mobile NICU rota, leave tracker and planner",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#0b1020",
-  "theme_color": "#111827",
+  "background_color": "#0b0d18",
+  "theme_color": "#171a2b",
   "orientation": "portrait",
   "icons": [
     {
